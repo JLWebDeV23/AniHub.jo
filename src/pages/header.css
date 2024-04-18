@@ -1,0 +1,80 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 30px 100px;
+    transition: 0.5s;
+    z-index: 10000;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid var(--primary);
+    border-image: linear-gradient(99deg, transparent, var(--primary), transparent) 30;
+    backdrop-filter: blur(20px);
+    padding: 10px 100px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 190px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.logoImage {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 35px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: .1vh solid #ffffff;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+}
+
+.logo-container:hover::before {
+    border-color: var(--primary);
+}
+
+.logo-container:hover .logo {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.nav { 
+    display: flex;
+}
+
+.loginIcon {
+    font-size: 22px;
+    margin: 3px 0 3px;
+}

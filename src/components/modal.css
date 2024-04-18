@@ -1,0 +1,42 @@
+.movieModal {
+    position: absolute;
+    top: 125px;
+    left: 100px;
+    right: 90px;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.709) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(186, 219, 217, 0.498);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    /* Add padding to create space around the iframe */
+    padding: 40px 20px 40px 40px;
+}
+
+.movieModal iframe {
+    position: relative;
+    width: calc(100% - 40px); /* Subtracting padding from width */
+    height: calc(100% - 40px); /* Subtracting padding from height */
+    border-radius: 20px;
+    max-width: 1280px;
+    max-height: 720px;
+    /* outline: 2px solid rgba(255, 255, 255, 0.5); */
+    box-shadow: 0 0 10px 10px rgba(162, 207, 168, 0.205);
+}
+
+.movieModal .modalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.movieModal.active {
+    opacity: 1;
+    visibility: visible;
+}
