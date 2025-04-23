@@ -1,10 +1,12 @@
 section .movie-card {
+  height: 90%;
   border: none;
   position: relative;
-  border-radius: 0;
-  background: #000000 !important;
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+  background: #8868569f !important;
+  box-shadow: 0 0 16px 3.5px rgba(208, 182, 182, 0.536);
+  border-radius: 18px;
   transition: 0.5s;
+  margin: 0 3px;
 }
 
 section .movie-card::before {
@@ -21,8 +23,15 @@ section .movie-card::before {
   transform: scale(0);
 }
 
+section .movie-card .img-fluid {
+  height: 265px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 section .movie-card p {
-  color: #dddddd;
+  color: #d3f6ff;
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
@@ -87,3 +96,4 @@ section .movie-card:hover::before {
   visibility: visible;
   transform: scale(1);
 }
+

@@ -7,10 +7,10 @@ const Card = ({ movie }) => {
       <div className="movie-card">
         <img src={movie.previewImg} alt="Preview" className="img-fluid" />
         <p>
-          {movie.length} | {movie.category}
+          {movie.title}
         </p>
         <div className="content">
-          <h4>{movie.title}</h4>
+          <h4>{movie.length} | {movie.category}</h4>
           <div className="card-icons">
             <ion-icon name="add-outline"></ion-icon>
             <ion-icon name="play-outline"></ion-icon>
